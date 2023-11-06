@@ -1,0 +1,76 @@
+<div class="container">
+  <form action="" method="">
+
+    <div class="form-title">
+      <h4>Random Password Generator</h4>
+      <p><i class="fa-solid fa-key fa-xs"></i></p>
+    </div>
+
+    <div class="input-group">
+      <div class="left">
+        <p>Password Length</p>
+      </div>
+      <div class="right">
+        <input type="number" name="passwordLength" min="4" max="16">
+        <p>Length is available between 4 ~ 16</p>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div class="left">
+        <p>Include Lowercase Characters</p>
+      </div>
+      <div class="right">
+        <input type="checkbox" name="includeLowercase">
+        <label for="includeLowercase">(e.g. abcdefg)</label>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div class="left">
+        <p>Include Uppercase Characters</p>
+      </div>
+      <div class="right">
+        <input type="checkbox" name="includeUppercase">
+        <label for="includeUppercase">(e.g. ABCDEFG)</label>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div class="left">
+        <p>Include Numbers</p>
+      </div>
+      <div class="right">
+        <input type="checkbox" name="includeNumber">
+        <label for="includeNumber">(e.g. 123456)</label>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div class="left">
+        <p>Include Symbols</p>
+      </div>
+      <div class="right">
+        <input type="checkbox" name="includeSymbol">
+        <label for="includeSymbol">(e.g. @#$%)</label>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div class="left">
+        <p>Exclude Characters</p>
+      </div>
+      <div class="right">
+        <input type="text" name="excludeCharacter">
+        <p>These characters will not appear in this password</p>
+      </div>
+    </div>
+
+    <div class="generatorPassword">
+      <p>Your password is:</p>
+    </div>
+
+    <button class="btn" type="submit">Generator Password</button>
+
+  </form>
+</div>
