@@ -1,5 +1,5 @@
 <div class="container">
-  <form action="" method="">
+  <form action="/submit" method="POST">
 
     <div class="form-title">
       <h4>Random Password Generator</h4>
@@ -11,7 +11,7 @@
         <p>Password Length</p>
       </div>
       <div class="right">
-        <input type="number" name="passwordLength" min="4" max="16">
+        <input type="number" name="pwdLength" min="4" max="16">
         <p>Length is available between 4 ~ 16</p>
       </div>
     </div>
@@ -21,8 +21,8 @@
         <p>Include Lowercase Characters</p>
       </div>
       <div class="right">
-        <input type="checkbox" name="includeLowercase">
-        <label for="includeLowercase">(e.g. abcdefg)</label>
+        <input type="checkbox" name="isLowerCase">
+        <label for="isLowerCase">(e.g. abcdefg)</label>
       </div>
     </div>
 
@@ -31,8 +31,8 @@
         <p>Include Uppercase Characters</p>
       </div>
       <div class="right">
-        <input type="checkbox" name="includeUppercase">
-        <label for="includeUppercase">(e.g. ABCDEFG)</label>
+        <input type="checkbox" name="isUpperCase">
+        <label for="isUpperCase">(e.g. ABCDEFG)</label>
       </div>
     </div>
 
@@ -41,8 +41,8 @@
         <p>Include Numbers</p>
       </div>
       <div class="right">
-        <input type="checkbox" name="includeNumber">
-        <label for="includeNumber">(e.g. 123456)</label>
+        <input type="checkbox" name="isNumber">
+        <label for="isNumber">(e.g. 123456)</label>
       </div>
     </div>
 
@@ -51,8 +51,8 @@
         <p>Include Symbols</p>
       </div>
       <div class="right">
-        <input type="checkbox" name="includeSymbol">
-        <label for="includeSymbol">(e.g. @#$%)</label>
+        <input type="checkbox" name="isSymbol">
+        <label for="isSymbol">(e.g. @#$%)</label>
       </div>
     </div>
 
@@ -61,14 +61,17 @@
         <p>Exclude Characters</p>
       </div>
       <div class="right">
-        <input type="text" name="excludeCharacter">
+        <input type="text" name="excludeChar">
         <p>These characters will not appear in this password</p>
       </div>
     </div>
 
-    <div class="generatorPassword">
-      <p>Your password is:</p>
-    </div>
+    {{#if pwd.length}}
+      <div class="generatorPassword">
+        <p class="pwd-title">Your password is: </p>
+        <p class="pwd">{{ pwd }}</p>
+      </div>
+    {{/if}}
 
     <button class="btn" type="submit">Generator Password</button>
 

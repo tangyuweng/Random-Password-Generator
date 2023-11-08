@@ -68,6 +68,7 @@ form {
 }
 
 .generatorPassword {
+  font-weight: bold;
   height: 5vh;
   font-size: 18px;
   background-color: rgb(58, 219, 228);
@@ -76,9 +77,14 @@ form {
   align-items: center;
 }
 
-.generatorPassword p {
+.pwd-title {
   padding-left: 10px;
   color: rgb(58, 145, 200);
+}
+
+.pwd {
+  padding-left: 10px;
+  color: rgb(255, 83, 79);
 }
 
 .btn {
