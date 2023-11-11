@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.post('/submit', (req, res) => {
   const options = req.body
   const pwd = generatorPwd(options)
-  res.render('index', { pwd })
+  res.render('index', { pwd, options })
 })
 
 app.listen(port, () => {

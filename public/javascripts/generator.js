@@ -32,6 +32,11 @@ function generatorPwd(options) {
       ? charArray.filter((char) => !excludeChar.includes(char))
       : charArray
 
+  // 當篩選完後為空錯誤處理
+  if (filteredArray.length === 0) {
+    return 'You must select at least one character set'
+  }
+
   // console.log(filteredArray)
   for (let i = 0; i < pwdLength; i++) {
     // 打亂的陣列

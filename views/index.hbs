@@ -11,7 +11,7 @@
         <p>Password Length</p>
       </div>
       <div class="right">
-        <input type="number" name="pwdLength" min="4" max="16">
+        <input type="number" name="pwdLength" min="4" max="16" value="{{ options.pwdLength }}">
         <p>Length is available between 4 ~ 16</p>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <p>Include Lowercase Characters</p>
       </div>
       <div class="right">
-        <input type="checkbox" name="isLowerCase">
+        <input type="checkbox" name="isLowerCase" {{#if options.isLowerCase}}checked{{/if}}>
         <label for="isLowerCase">(e.g. abcdefg)</label>
       </div>
     </div>
@@ -31,7 +31,7 @@
         <p>Include Uppercase Characters</p>
       </div>
       <div class="right">
-        <input type="checkbox" name="isUpperCase">
+        <input type="checkbox" name="isUpperCase" {{#if options.isUpperCase}}checked{{/if}}>
         <label for="isUpperCase">(e.g. ABCDEFG)</label>
       </div>
     </div>
@@ -41,7 +41,7 @@
         <p>Include Numbers</p>
       </div>
       <div class="right">
-        <input type="checkbox" name="isNumber">
+        <input type="checkbox" name="isNumber" {{#if options.isNumber}}checked{{/if}}>
         <label for="isNumber">(e.g. 123456)</label>
       </div>
     </div>
@@ -51,7 +51,7 @@
         <p>Include Symbols</p>
       </div>
       <div class="right">
-        <input type="checkbox" name="isSymbol">
+        <input type="checkbox" name="isSymbol" {{#if options.isSymbol}}checked{{/if}}>
         <label for="isSymbol">(e.g. @#$%)</label>
       </div>
     </div>
@@ -61,12 +61,12 @@
         <p>Exclude Characters</p>
       </div>
       <div class="right">
-        <input type="text" name="excludeChar">
+        <input type="text" name="excludeChar" value="{{ options.excludeChar }}">
         <p>These characters will not appear in this password</p>
       </div>
     </div>
 
-    {{#if pwd.length}}
+    {{#if pwd}}
       <div class="generatorPassword">
         <p class="pwd-title">Your password is: </p>
         <p class="pwd">{{ pwd }}</p>
