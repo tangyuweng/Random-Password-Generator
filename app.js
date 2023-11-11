@@ -1,7 +1,7 @@
 const express = require('express')
 const { engine } = require('express-handlebars')
 const bodyParser = require('body-parser')
-const { generatorPwd } = require('./generator')
+const { generatorPwd } = require('./public/javascripts/generator')
 const app = express()
 const port = 3000
 
