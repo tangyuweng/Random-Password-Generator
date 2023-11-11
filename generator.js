@@ -32,7 +32,7 @@ function generatorPwd(options) {
       ? charArray.filter((char) => !excludeChar.includes(char))
       : charArray
 
-  console.log(filteredArray)
+  // console.log(filteredArray)
   for (let i = 0; i < pwdLength; i++) {
     // 打亂的陣列
     const shuffledArray = shuffle(filteredArray)
